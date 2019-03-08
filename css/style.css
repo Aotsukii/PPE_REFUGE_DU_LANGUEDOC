@@ -1,5 +1,24 @@
 *{
     margin: 0;
     padding: 0;
-    font-family:Aller, sans-serif;
+    font-family:aller,sans-serif;
+    overflow-x:hidden!important;
+}
+
+body{
+    background-image: linear-gradient( rgba(238, 241, 89, 0.05),rgba(0, 0, 0, 0.6)), url(../img/index_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+h1{
+    color: #fff;
+    font-size:4em!important;
+}
+
+.md-form{
+    margin-top:0!important;
+    margin-bottom:0!important;
 }
