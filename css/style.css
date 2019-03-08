@@ -18,7 +18,28 @@ h1{
     font-size:4em!important;
 }
 
+h2{
+    font-size:3em!important;
+}
+
+
+.white-text{
+    color:white!important;
+}
+
 .md-form{
     margin-top:0!important;
     margin-bottom:0!important;
+}
+
+.contactSection {
+    background-color: rgba(255, 255, 255, 0.7)!important;
+    padding:0 5%;
+    border-radius:1%;
+}
+
+.devenirDiv{
+    background-color: rgba(255, 255, 255, 0.7)!important;
+    padding:5% 0;
+    border-radius:1%;
 }

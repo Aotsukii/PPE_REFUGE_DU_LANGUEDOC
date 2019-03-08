@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Refuge du Languedoc</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
-                    <button class="btn btn-deep-orange">Enregistrement</button>
+                    <button class="btn btn-deep-orange">S'enregistrer</button>
                 </div>
             </div>
         </div>
