@@ -75,40 +75,34 @@
                                 <input type="text" id="orangeForm-name" class="form-control validate">
                                 <label data-error="wrong" data-success="right" for="orangeForm-name">Nom</label>
                             </div>
-                            <div class="md-form">
-                                <i class="fas prefix grey-text"></i>
-
-                                <input type="text" id="orangeForm-surname" class="form-control validate">
-                                <label data-error="wrong" data-success="right" for="orangeForm-surname">Prénom</label>
+                            <div class="md-form ">
+                                <i class="fas fa-user prefix grey-text"></i>
+                                <input type="text" id="orangeForm-name" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="orangeForm-name">Nom</label>
                             </div>
-                            <div class="md-form">
-                                <i class="fas fa-address-card prefix grey-text"></i>
-                                <input type="email" id="orangeForm-address" class="form-control validate">
-                                <label data-error="wrong" data-success="right" for="orangeForm-address">Adresse</label>
+                            <div class="md-form ">
+                                <i class="fas fa-user prefix grey-text"></i>
+                                <input type="text" id="orangeForm-name" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="orangeForm-name">Nom</label>
                             </div>
-                            <div class="md-form">
-                                <i class="fas fa-map-marker-alt prefix grey-text"></i>
-                                <input type="email" id="orangeForm-zip" class="form-control validate">
-                                <label data-error="wrong" data-success="right" for="orangeForm-zip">Code postal</label>
+                            <div class="md-form ">
+                                <i class="fas fa-user prefix grey-text"></i>
+                                <input type="text" id="orangeForm-name" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="orangeForm-name">Nom</label>
                             </div>
-                            <div class="md-form">
-                                <i class="fas fa-envelope prefix grey-text"></i>
-                                <input type="email" id="orangeForm-email" class="form-control validate">
-                                <label data-error="wrong" data-success="right" for="orangeForm-email">Email</label>
+                            <div class="md-form ">
+                                <i class="fas fa-user prefix grey-text"></i>
+                                <input type="text" id="orangeForm-name" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="orangeForm-name">Nom</label>
                             </div>
-                            <div class="md-form">
-                                <i class="fas fa-phone prefix grey-text"></i>
-                                <input type="tel" id="orangeForm-phone" class="form-control validate">
-                                <label data-error="wrong" data-success="right" for="orangeForm-phone">Numéro de téléphone</label>
-                            </div>
-                            <div class="md-form">
-                                <i class="fas fa-lock prefix grey-text"></i>
-                                <input type="password" id="orangeForm-pass" class="form-control validate">
-                                <label data-error="wrong" data-success="right" for="orangeForm-pass">Mot de passe</label>
+                            <div class="md-form ">
+                                <i class="fas fa-user prefix grey-text"></i>
+                                <input type="text" id="orangeForm-name" class="form-control validate">
+                                <label data-error="wrong" data-success="right" for="orangeForm-name">Nom</label>
                             </div>
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
-                            <button class="btn btn-deep-orange">Enregistrer</button>
+                            <button class="btn btn-lg btn-default btn-rounded">Devenir FA</button>
                         </div>
                     </div>
                 </div>

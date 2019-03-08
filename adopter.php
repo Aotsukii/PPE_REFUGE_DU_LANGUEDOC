@@ -60,10 +60,9 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
                             optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
                             Odit sed qui, dolorum!.</p>
-                        <a class="btn btn-lg btn-default btn-rounded"><i class="fas fa-clone left"></i> Voir les chats à l'adoption</a>
+                        <a class="btn btn-lg btn-default btn-rounded" href="./adopter_chat.php"><i class="fas fa-clone left"></i> Voir les chats à l'adoption</a>
                     </div>
                 </div>
-
             </div>
             <!-- Card -->
         </div>
@@ -79,7 +78,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
                             optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
                             Odit sed qui, dolorum!.</p>
-                        <a class="btn btn-lg btn-default btn-rounded"><i class="fas fa-clone left"></i> Voir les chiens à l'adoption</a>
+                        <a class="btn btn-lg btn-default btn-rounded" href="./adopter_chien.php"><i class="fas fa-clone left"></i> Voir les chiens à l'adoption</a>
                     </div>
                 </div>
 

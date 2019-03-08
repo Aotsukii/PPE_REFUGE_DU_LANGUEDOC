@@ -32,6 +32,10 @@ h2{
     margin-bottom:0!important;
 }
 
+.md-form input, .md-form textarea{
+    border-bottom:1px solid #5d6166!important;
+
+}
 .contactSection {
     background-color: rgba(255, 255, 255, 0.7)!important;
     padding:0 5%;
