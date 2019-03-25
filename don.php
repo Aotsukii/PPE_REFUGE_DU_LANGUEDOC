@@ -24,9 +24,9 @@
         <div class="col-md my-auto">
             <section class="mb-4 contactSection">
                 <!--Section heading-->
-                <h2 class="h1-responsive font-weight-bold text-center my-4">Faire un Don</h2>
+                <h3 class="h1-responsive font-weight-bold text-center my-4">Faire un Don</h3>
                 <!--Section description-->
-                <p class="text-center w-responsive mx-auto mb-5">Les dons aident le refuge à fonctionner, et nous permet de continuer à aider les animaux.</p>
+                <p class="text-center w-responsive mx-auto mb-5">Les dons aident le refuge à fonctionner, et nous permettent de continuer à aider les animaux.</p>
                 <div class="row">
                     <!--Grid column-->
                     <div class="col-md-12 mb-md-5 mb-5">

@@ -19,7 +19,11 @@
 </script>
 <div id="header"></div>
 <body>
+
 <div class="row h-100">
+    <div class="col-md-12">
+        <h2 class="text-center font-weight-bold page-title">Bievenue sur le site du Refuge du Languedoc !</h2>
+    </div>
     <div class="col-md my-auto">
 
     </div>

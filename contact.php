@@ -25,7 +25,7 @@
             <!--Section: Contact v.2-->
             <section class="mb-4 contactSection">
                 <!--Section heading-->
-                <h2 class="h1-responsive font-weight-bold text-center my-4">Nous contacter</h2>
+                <h3 class="h1-responsive font-weight-bold text-center my-4">Nous contacter</h3>
                 <!--Section description-->
                 <p class="text-center w-responsive mx-auto mb-5">Si vous avez la moindre question, par rapport aux collectes, animaux, etc, n'hésitez pas !</p>
                 <div class="row">

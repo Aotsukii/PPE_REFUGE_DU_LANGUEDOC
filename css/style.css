@@ -20,9 +20,12 @@ h1{
 
 h2{
     font-size:3em!important;
+    color: #fff;
 }
 
-
+.page-title{
+    padding-top: 80px;
+}
 .white-text{
     color:white!important;
 }
