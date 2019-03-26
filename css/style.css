@@ -13,6 +13,20 @@ body{
     height: 100vh;
 }
 
+table{
+    text-align:center;
+    width:100%;
+
+}
+
+th{
+    background-color: rgba(120, 86, 74, 0.36);
+    color:white;
+}
+
+td{
+    background-color: rgba(225, 231, 238, 0.51);
+}
 h1{
     color: #fff;
     font-size:4em!important;

@@ -14,7 +14,7 @@
 </head>
 <script>
     $(function(){
-        $("#header").load("./includes/header.html");
+        $("#header").load("./includes/header_membre.html");
     });
 </script>
 <div id="header"></div>
@@ -34,13 +34,13 @@
                         <form id="contact-form" name="contact-form" action="#" method="POST">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="md-form mb-0">
+                                    <div class="md-form mb-5">
                                         <input type="text" id="name" name="name" class="form-control">
                                         <label for="name" class="">Nom</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="md-form mb-0">
+                                    <div class="md-form mb-5">
                                         <input type="text" id="email" name="email" class="form-control">
                                         <label for="email" class="">Email</label>
                                     </div>
@@ -48,7 +48,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="md-form mb-0">
+                                    <div class="md-form mb-5">
                                         <input type="text" id="subject" name="subject" class="form-control">
                                         <label for="subject" class="">Sujet</label>
                                     </div>
