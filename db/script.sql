@@ -125,6 +125,7 @@ CREATE TABLE ANIMAL(
         race_animal        Varchar (50) NOT NULL ,
         pelage_animal      Varchar (50) NOT NULL ,
         besoinTraitement   Bool NOT NULL ,
+        est_chat           Bool NOT NULL ,
         id_gerant          Int NOT NULL ,
         id_gerant_FA       Int ,
         id_fa              Int ,
