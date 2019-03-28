@@ -21,56 +21,41 @@
 </script>
 <div id="header"></div>
 <body>
-<div class="row h-30"></div>
-<div class="row h-70">
-    <!--
-        <th class="th-sm" scope="col">#</th>
-        <th class="th-sm" scope="col">NOM</th>
-        <th class="th-sm" scope="col">AGE</th>
-        <th class="th-sm" scope="col">SEXE</th>
-        <th class="th-sm" scope="col">OK CHIENS</th>
-        <th class="th-sm" scope="col">OK CHATS</th>
-        <th class="th-sm" scope="col">OK ENFANTS</th>
-        <th class="th-sm" scope="col">ADOPTABLE DEPUIS</th>
-        <th class="th-sm" scope="col">PRIX ADOPTION</th>
-        <th class="th-sm" scope="col">BESOIN TRAITEMENT</th>
-        <th class="th-sm" scope="col">DESCRIPTION</th>
-        <th class="th-sm" scope="col">ADOPTER</th>
-        -->
-    <div class="col-md-12">
-        <h2 class="text-center font-weight-bold page-title">COLLECTES A VENIR</h2>
-        <table id="example" class="table table-striped table-bordered centered" >
-            <thead>
-            <tr>
-                <th class="sorting">#</th>
-                <th>DATE</th>
-                <th>LIEU</th>
-                <th>NOMBRE DE PARTICIPANTS</th>
-                <th>JE PARTICIPE</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>TEST</td>
-                <td>TEST</td>
-                <td>TEST</td>
-                <td>TEST</td>
-                <td>TEST</td>
-            </tr>
-            <tr>
-                <td>TEST</td>
-                <td>TEST</td>
-                <td>TEST</td>
-                <td>TEST</td>
-                <td>TEST</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-
-<!-- JQuery -->
-<!-- Bootstrap tooltips -->
-
+    <section style="height:100vh;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center font-weight-bold page-title">COLLECTES A VENIR</h2>
+                    <table id="example" class="table table-striped table-bordered centered" >
+                        <thead>
+                        <tr>
+                            <th class="sorting">#</th>
+                            <th>DATE</th>
+                            <th>LIEU</th>
+                            <th>NOMBRE DE PARTICIPANTS</th>
+                            <th>JE PARTICIPE</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>TEST</td>
+                            <td>TEST</td>
+                            <td>TEST</td>
+                            <td>TEST</td>
+                            <td>TEST</td>
+                        </tr>
+                        <tr>
+                            <td>TEST</td>
+                            <td>TEST</td>
+                            <td>TEST</td>
+                            <td>TEST</td>
+                            <td>TEST</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

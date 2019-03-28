@@ -30,7 +30,7 @@
                 <p class="text-center w-responsive mx-auto mb-5">Si vous avez la moindre question, par rapport aux collectes, animaux, etc, n'hésitez pas !</p>
                 <div class="row">
                     <!--Grid column-->
-                    <div class="col-md-9 mb-md-0 mb-5">
+                    <div class="col-md-9 mb-md-5 mb-5">
                         <form id="contact-form" name="contact-form" action="#" method="POST">
                             <div class="row">
                                 <div class="col-md-6">
