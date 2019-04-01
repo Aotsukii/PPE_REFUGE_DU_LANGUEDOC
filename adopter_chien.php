@@ -59,7 +59,7 @@
                         <td>TEST</td>
                         <td>TEST</td>
                         <td>TEST</td>
-                        <td>TEST</td>
+                        <td><a href="#">Adopter</a></td>
                     </tr>
                     <tr>
                         <td>TEST</td>
@@ -73,7 +73,7 @@
                         <td>TEST</td>
                         <td>TEST</td>
                         <td>TEST</td>
-                        <td>TEST</td>
+                        <td><a href="#">Adopter</a></td>
                     </tr>
                     </tbody>
                 </table>
