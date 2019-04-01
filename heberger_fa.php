@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Accueil membre</title>
+    <title>Héberger un animal</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/datatable.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
@@ -19,7 +19,7 @@
 </head>
 <script>
     $(function () {
-        $("#header").load("./includes/header_membre.html");
+        $("#header").load("./includes/header_fa.html");
     });
 </script>
 <div id="header"></div>
@@ -28,7 +28,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center font-weight-bold page-title">LISTE DES CHATS A L'ADOPTION</h2>
+                    <h2 class="text-center font-weight-bold page-title">LISTE DES ANIMAUX A HEBERGER</h2>
                     <table id="example" class="table table-striped table-bordered">
                         <thead>
                         <tr>
@@ -43,7 +43,7 @@
                             <th>PRIX ADOPTION</th>
                             <th>BESOIN TRAITEMENT</th>
                             <th>DESCRIPTION</th>
-                            <th>ADOPTER</th>
+                            <th>HEBERGER</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -59,7 +59,7 @@
                             <td>TEST</td>
                             <td>TEST</td>
                             <td>TEST</td>
-                            <td><a href="#">Adopter</a></td>
+                            <td><a href="#">Héberger</a></td>
                         </tr>
                         <tr>
                             <td>TEST</td>
@@ -73,7 +73,7 @@
                             <td>TEST</td>
                             <td>TEST</td>
                             <td>TEST</td>
-                            <td><a href="#">Adopter</a></td>
+                            <td><a href="#">Héberger</a></td>
                         </tr>
                         </tbody>
                     </table>

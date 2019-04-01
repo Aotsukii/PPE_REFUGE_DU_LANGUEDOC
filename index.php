@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <title>Refuge du Languedoc</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-    <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/css/mdb.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
 </head>
 <body>
     <div class="row h-100">
@@ -75,12 +77,12 @@
                     </div>
                     <div class="md-form">
                         <i class="fas fa-address-card prefix grey-text"></i>
-                        <input type="email" id="orangeForm-address" class="form-control validate">
+                        <input type="text" id="orangeForm-address" class="form-control validate">
                         <label data-error="wrong" data-success="right" for="orangeForm-address">Adresse</label>
                     </div>
                     <div class="md-form">
                         <i class="fas fa-map-marker-alt prefix grey-text"></i>
-                        <input type="email" id="orangeForm-zip" class="form-control validate">
+                        <input type="text" id="orangeForm-zip" class="form-control validate">
                         <label data-error="wrong" data-success="right" for="orangeForm-zip">Code postal</label>
                     </div>
                     <div class="md-form">
@@ -90,7 +92,7 @@
                     </div>
                     <div class="md-form">
                         <i class="fas fa-phone prefix grey-text"></i>
-                        <input type="tel" id="orangeForm-phone" class="form-control validate">
+                        <input type="tel" id="orangeForm-phone" class="form-control validate" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$">
                         <label data-error="wrong" data-success="right" for="orangeForm-phone">Numéro de téléphone</label>
                     </div>
                     <div class="md-form">
@@ -98,6 +100,11 @@
                         <input type="password" id="orangeForm-pass" class="form-control validate">
                         <label data-error="wrong" data-success="right" for="orangeForm-pass">Mot de passe</label>
                     </div>
+                    <select class="browser-default custom-select">
+                        <option disabled selected>Type de compte</option>
+                        <option value="FA">Famille d'accueil</option>
+                        <option value="MEM">Membre bénévole</option>
+                    </select>
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
                     <button class="btn btn-deep-orange">S'enregistrer</button>
