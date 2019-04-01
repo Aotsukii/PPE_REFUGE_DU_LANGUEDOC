@@ -35,21 +35,23 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body mx-3">
-                    <div class="md-form ">
-                        <i class="fas fa-envelope prefix grey-text"></i>
-                        <input type="email" id="defaultForm-email" class="form-control validate">
-                        <label data-error="wrong" data-success="right" for="defaultForm-email">Votre mail</label>
+                <form action="./traitment_login.php" method="POST">
+                    <div class="modal-body mx-3">
+                        <div class="md-form ">
+                            <i class="fas fa-envelope prefix grey-text"></i>
+                            <input type="email" id="defaultForm-email" name="defaultForm-email" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="defaultForm-email">Votre mail</label>
+                        </div>
+                        <div class="md-form">
+                            <i class="fas fa-lock prefix grey-text"></i>
+                            <input type="password" id="defaultForm-pass" name="defaultForm-pass" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="defaultForm-pass">Votre mot de passe</label>
+                        </div>
                     </div>
-                    <div class="md-form ">
-                        <i class="fas fa-lock prefix grey-text"></i>
-                        <input type="password" id="defaultForm-pass" class="form-control validate">
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Votre mot de passe</label>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button class="btn btn-default" type="submit" id="submit" name="submit">Connexion</button>
                     </div>
-                </div>
-                <div class="modal-footer d-flex justify-content-center">
-                    <button class="btn btn-default">Connexion</button>
-                </div>
+                </form>
             </div>
         </div>
     </div>
