@@ -9,9 +9,8 @@
 
 CREATE TABLE USER(
         id_user      Int  Auto_increment  NOT NULL ,
-        login        Varchar (50) NOT NULL ,
-        password     Varchar (50) NOT NULL ,
         mail         Varchar (50) NOT NULL ,
+        password     Varchar (50) NOT NULL ,
         nom_user     Varchar (50) NOT NULL ,
         prenom_user  Varchar (50) NOT NULL ,
         adresse_user Varchar (50) NOT NULL ,
@@ -27,9 +26,8 @@ CREATE TABLE USER(
 
 CREATE TABLE GERANT(
         id_user      Int NOT NULL ,
-        login        Varchar (50) NOT NULL ,
-        password     Varchar (50) NOT NULL ,
         mail         Varchar (50) NOT NULL ,
+        password     Varchar (50) NOT NULL ,
         nom_user     Varchar (50) NOT NULL ,
         prenom_user  Varchar (50) NOT NULL ,
         adresse_user Varchar (50) NOT NULL ,
@@ -53,9 +51,8 @@ CREATE TABLE FA(
         aEnfant        Bool NOT NULL ,
         ok_Quarantaine Bool NOT NULL ,
         espace_Dispo   Int NOT NULL ,
-        login          Varchar (50) NOT NULL ,
-        password       Varchar (50) NOT NULL ,
         mail           Varchar (50) NOT NULL ,
+        password       Varchar (50) NOT NULL ,
         nom_user       Varchar (50) NOT NULL ,
         prenom_user    Varchar (50) NOT NULL ,
         adresse_user   Varchar (50) NOT NULL ,
@@ -73,9 +70,8 @@ CREATE TABLE FA(
 
 CREATE TABLE MEMBRE(
         id_user      Int NOT NULL ,
-        login        Varchar (50) NOT NULL ,
-        password     Varchar (50) NOT NULL ,
         mail         Varchar (50) NOT NULL ,
+        password     Varchar (50) NOT NULL ,
         nom_user     Varchar (50) NOT NULL ,
         prenom_user  Varchar (50) NOT NULL ,
         adresse_user Varchar (50) NOT NULL ,
