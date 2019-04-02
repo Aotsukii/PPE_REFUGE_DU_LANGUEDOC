@@ -31,7 +31,7 @@ if((isset($_SESSION['ID_GERANT'])))
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card card-image mt-5 ml-5" >
                     <!-- Content -->
                     <div class="text-white text-center d-flex align-items-center rgba-brown-strong py-5 px-4">
@@ -43,7 +43,7 @@ if((isset($_SESSION['ID_GERANT'])))
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card card-image mt-5 mr-2 ml-2">
                     <!-- Content -->
                     <div class="text-white text-center d-flex align-items-center rgba-brown-strong py-5 px-4">
@@ -55,14 +55,26 @@ if((isset($_SESSION['ID_GERANT'])))
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card card-image mt-5 mr-2 ml-2" >
                     <!-- Content -->
                     <div class="text-white text-center d-flex align-items-center rgba-brown-strong py-5 px-4">
                         <div style="margin:auto;">
                             <h3 class="card-title pt-2"><strong>AJOUTER UN ANIMAL</strong></h3>
                             <p>Ajoutez un animal disponible à l'adoption</p>
-                            <a class="btn btn-lg btn-default btn-rounded" href="./add_animal.php"><i class="fas fa-clone left"></i> AJOUTER UN ANIMAL </a>
+                            <a class="btn btn-lg btn-default btn-rounded" href="./add_animal.php"><i class="fas fa-clone left"></i> Ajouter un animal </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-image mt-5 mr-2 ml-2" >
+                    <!-- Content -->
+                    <div class="text-white text-center d-flex align-items-center rgba-brown-strong py-5 px-4">
+                        <div style="margin:auto;">
+                            <h3 class="card-title pt-2"><strong>HISTORIQUE DES DONS</strong></h3>
+                            <p>Accédez à l'historique des dons de membres</p>
+                            <a class="btn btn-lg btn-default btn-rounded" href="./liste_dons.php"><i class="fas fa-clone left"></i> Consulter l'historique</a>
                         </div>
                     </div>
                 </div>
