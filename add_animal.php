@@ -1,3 +1,16 @@
+<?php
+session_start();
+try
+{
+    $connect = new PDO('mysql:host=localhost;dbname=refuge_languedoc;charset=utf8', 'root', 'root');
+}
+catch (Exception $e)
+{
+    die('Erreur : ' . $e->getMessage());
+}
+if((isset($_SESSION['ID_GERANT'])))
+{
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -29,12 +42,12 @@
                 <div class="row">
                     <!--Grid column-->
                     <div class="col-md-12 mb-md-5 mb-5">
-                        <form id="contact-form" name="contact-form" action="#" method="POST">
+                        <form id="contact-form" name="contact-form" action="traitment_add_animal.php" method="POST">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="md-form mb-5">
-                                        <input type="text" id="name" name="name" class="form-control">
-                                        <label for="name" class="">Nom</label>
+                                        <input type="text" id="nomA" name="nomA" class="form-control">
+                                        <label for="nomA" class="">Nom</label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -45,40 +58,47 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="md-form mb-5">
-                                        <select class="browser-default custom-select">
-                                            <option disabled selected>Sexe</option>
-                                            <option value="male">Male</option>
-                                            <option value="female">Femelle</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="md-form mb-5">
-                                        <select class="browser-default custom-select">
-                                            <option disabled selected>Race</option>
-                                            <option value="male">Male</option>
-                                            <option value="female">Femelle</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="md-form mb-5">
                                         <input type="text" id="pelageA" name="pelageA" class="form-control">
                                         <label for="pelageA" class="">Pelage</label>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-4">
-                                    <select class="browser-default custom-select">
+                                    <div class="md-form mb-5">
+                                        <select class="browser-default custom-select" id="raceA" name="raceA">
+                                            <option disabled selected>Race</option>
+                                            <?php
+                                                $req_race = $connect->prepare("SELECT * FROM race");
+                                                if ($req_race->execute()){
+                                                    $result=$req_race->fetchAll();
+                                                    foreach ($result as $item){
+                                                        echo("<option value='".$item['id_race']."'>".$item['lib_race']."</option>");
+                                                    }
+                                                }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="md-form mb-5">
+                                        <select class="browser-default custom-select" id="sexeA" name="sexeA">
+                                            <option disabled selected>Sexe</option>
+                                            <option value="male">Male</option>
+                                            <option value="femelle">Femelle</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="browser-default custom-select" name="estChat" id="estChat">
                                         <option disabled selected>Chien/chat</option>
-                                        <option value="chien">Chien</option>
-                                        <option value="chat">Chat</option>
+                                        <option value="0">Chien</option>
+                                        <option value="1">Chat</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-9">
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="okChat" name="okChat">
                                         <label class="form-check-label" for="okChat" style="margin-right:10%;">OK Chats</label>
@@ -92,6 +112,12 @@
                                         <label class="form-check-label" for="besoinTrait" style="margin-right:10%;">Besoin traitement</label>
                                     </div>
                                 </div>
+                                <div class="col-md-3">
+                                    <div class="md-form mb-5">
+                                        <input type="number" id="amount" name="amount" class="form-control">
+                                        <label for="amount">Prix à l'adoption (en €)</label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
@@ -102,7 +128,7 @@
                                 </div>
                             </div>
                         <div class="text-center text-md-left">
-                            <a class="btn btn-lg btn-default btn-rounded">Enregistrer</a>
+                            <button class="btn btn-lg btn-default btn-rounded" type="submit" id="submit" name="submit">Enregistrer</button>
                         </div>
                         </form>
                         <div class="status"></div>
@@ -122,3 +148,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
 </body>
 </html>
+    <?php
+} else { header('location:index.php?error=Vous n\'avez pas accès à cette page');}
+?>

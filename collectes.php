@@ -1,3 +1,16 @@
+<?php
+session_start();
+try
+{
+    $connect = new PDO('mysql:host=localhost;dbname=refuge_languedoc;charset=utf8', 'root', 'root');
+}
+catch (Exception $e)
+{
+    die('Erreur : ' . $e->getMessage());
+}
+if((isset($_SESSION['ID_MEMBRE'])))
+{
+    ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -37,20 +50,21 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>TEST</td>
-                            <td>TEST</td>
-                            <td>TEST</td>
-                            <td>TEST</td>
-                            <td>TEST</td>
-                        </tr>
-                        <tr>
-                            <td>TEST</td>
-                            <td>TEST</td>
-                            <td>TEST</td>
-                            <td>TEST</td>
-                            <td>TEST</td>
-                        </tr>
+                        <?php
+                        $stmt=$connect->prepare("SELECT * FROM collecte");
+                        if ($stmt->execute()){
+                            $result=$stmt->fetchAll();
+                            foreach($result AS $coll){
+                                $part=$connect->prepare("SELECT COUNT(id_user) as nbPart FROM participer WHERE ".$coll['id_collecte']."=participer.id_collecte");
+                                $partResult=$part->execute()? $part->fetch()['nbPart'] : 0;
+                                echo("<tr><td>".$coll['id_collecte']."</td>");
+                                echo("<td>".$coll['date_collecte']."</td>");
+                                echo("<td>".$coll['lieu_collecte']."</td>");
+                                echo("<td>".$partResult."</td>");
+                                echo("<td><a href=\"participer_collecte.php?id_collecte=".$coll['id_collecte']."\"class=\"btn btn-default btn-rounded\" type='submit' id='submit' name='submit'>Je participe</a></td></tr>");
+                            }
+                        }
+                        ?>
                         </tbody>
                     </table>
                 </div>
@@ -59,3 +73,6 @@
     </section>
 </body>
 </html>
+    <?php
+} else { header('location:index.php?error=Vous n\'avez pas accès à cette page');}
+?>

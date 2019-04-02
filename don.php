@@ -1,3 +1,8 @@
+<?php
+session_start();
+if((isset($_SESSION['ID_MEMBRE'])))
+{
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -30,41 +35,20 @@
                 <div class="row">
                     <!--Grid column-->
                     <div class="col-md-12 mb-md-5 mb-5">
-                        <form id="contact-form" name="contact-form" action="#" method="POST">
+                        <form id="contact-form" name="contact-form" action="traitment_don.php" method="POST">
                             <div class="row">
-                                <div class="col-md-6">
-                                    <div class="md-form mb-5">
-                                        <input type="text" id="name" name="name" class="form-control">
-                                        <label for="name" class="">Nom</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="md-form mb-5">
-                                        <input type="text" id="email" name="email" class="form-control">
-                                        <label for="email" class="">Email</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
                                     <div class="md-form mb-5">
                                         <input type="number" id="amount" name="amount" class="form-control">
                                         <label for="amount" class="">Montant (en €)</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="md-form">
-                                        <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                                        <label for="message">Message (optionnel)</label>
-                                    </div>
-                                </div>
+                            <div class="text-center text-md-center">
+                                <button class="btn btn-lg btn-default btn-rounded" type="submit" id="submit" name="submit">FAIRE UN DON</button>
                             </div>
                         </form>
-                        <div class="text-center text-md-left">
-                            <a class="btn btn-lg btn-default btn-rounded" onclick="document.getElementById('contact-form').submit();">Envoyer</a>
-                        </div>
                         <div class="status"></div>
                     </div>
                 </div>
@@ -82,3 +66,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
 </body>
 </html>
+    <?php
+} else { header('location:index.php?error=Vous n\'avez pas accès à cette page');}
+?>

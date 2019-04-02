@@ -8,7 +8,7 @@ catch (Exception $e)
 {
     die('Erreur : ' . $e->getMessage());
 }
-if((isset($_SESSION['ID_MEMBRE'])))
+if((isset($_SESSION['ID_FA'])))
 {
     ?>
     <!DOCTYPE html>
@@ -32,7 +32,7 @@ if((isset($_SESSION['ID_MEMBRE'])))
     </head>
     <script>
         $(function () {
-            $("#header").load("./includes/header_membre.html");
+            $("#header").load("./includes/header_fa.html");
         });
     </script>
     <div id="header"></div>
@@ -41,7 +41,7 @@ if((isset($_SESSION['ID_MEMBRE'])))
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center font-weight-bold page-title">LISTE DES CHATS A L'ADOPTION</h2>
+                    <h2 class="text-center font-weight-bold page-title">LISTE DES CHIENS A HEBERGER</h2>
                     <table id="example" class="table table-striped table-bordered">
                         <thead>
                         <tr>
@@ -63,7 +63,7 @@ if((isset($_SESSION['ID_MEMBRE'])))
                         </thead>
                         <tbody>
                         <?php
-                        $stmt=$connect->prepare("SELECT * FROM animal INNER JOIN race ON animal.id_race = race.id_race WHERE est_chat=0 AND id_membre IS NULL");
+                        $stmt=$connect->prepare("SELECT * FROM animal INNER JOIN race ON animal.id_race = race.id_race WHERE est_chat=0 AND id_membre IS NULL AND id_fa IS NULL");
                         if ($stmt->execute()){
                             $result=$stmt->fetchAll();
                             foreach($result AS $chien){
@@ -80,7 +80,7 @@ if((isset($_SESSION['ID_MEMBRE'])))
                                 echo("<td>".$chien['prix_adoption']."</td>");
                                 echo("<td>".$chien['besoinTraitement']."</td>");
                                 echo("<td>".$chien['description_animal']."</td>");
-                                echo("<td><a href=\"traitment_adopt_chien.php?id_animal=".$chien['id_animal']."\"class=\"btn btn-default btn-rounded\" type='submit' id='submit' name='submit'>Adopter</a></td></tr>");
+                                echo("<td><a href=\"traitment_heberg_chien.php?id_animal=".$chien['id_animal']."\"class=\"btn btn-default btn-rounded\" type='submit' id='submit' name='submit'>Héberger</a></td></tr>");
                             }
                         }
                         ?>

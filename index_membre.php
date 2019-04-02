@@ -1,3 +1,8 @@
+<?php
+session_start();
+if((isset($_SESSION['ID_MEMBRE'])))
+{
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -85,3 +90,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
 </body>
 </html>
+    <?php
+} else { header('location:index.php?error=Vous n\'avez pas accès à cette page');}
+?>

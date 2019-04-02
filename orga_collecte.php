@@ -1,3 +1,8 @@
+<?php
+session_start();
+if((isset($_SESSION['ID_GERANT'])))
+{
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -29,7 +34,7 @@
                 <div class="row">
                     <!--Grid column-->
                     <div class="col-md-12 mb-md-5 mb-5">
-                        <form id="contact-form" name="contact-form" action="#" method="POST">
+                        <form id="contact-form" name="contact-form" action="traitment_orga_collecte.php" method="POST">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="md-form mb-5">
@@ -45,9 +50,9 @@
                                     </div>
                                 </div>
                             </div>
-                        <div class="text-center ">
-                            <a class="btn btn-lg btn-default btn-rounded">Enregistrer</a>
-                        </div>
+                            <div class="text-center ">
+                                <button class="btn btn-lg btn-default btn-rounded" type="submit" id="submit" name="submit">Créer une collecte</button>
+                            </div>
                         </form>
                         <div class="status"></div>
                     </div>
@@ -66,3 +71,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
 </body>
 </html>
+    <?php
+} else { header('location:index.php?error=Vous n\'avez pas accès à cette page');}
+?>

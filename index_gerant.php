@@ -1,3 +1,8 @@
+<?php
+session_start();
+if((isset($_SESSION['ID_GERANT'])))
+{
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -45,7 +50,7 @@
                         <div style="margin:auto;">
                             <h3 class="card-title pt-2"><strong>COLLECTE</strong></h3>
                             <p class="text-center">Cliquez ici pour organiser une nouvelle collecte</p>
-                            <a class="btn btn-lg btn-default btn-rounded" href="./orga_collecte.php"><i class="fas fa-clone left"></i> Voir les prochaines collectes</a>
+                            <a class="btn btn-lg btn-default btn-rounded" href="./orga_collecte.php"><i class="fas fa-clone left"></i> Organiser une collecte</a>
                         </div>
                     </div>
                 </div>
@@ -73,3 +78,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
 </body>
 </html>
+    <?php
+} else { header('location:index.php?error=Vous n\'avez pas accès à cette page');}
+?>

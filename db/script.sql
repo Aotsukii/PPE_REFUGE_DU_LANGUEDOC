@@ -140,13 +140,13 @@ CREATE TABLE ANIMAL(
         pelage_animal      Varchar (50) NOT NULL ,
         besoinTraitement   Bool NOT NULL ,
         est_chat           Bool NOT NULL ,
-        id_user            Int ,
-        id_user_MEMBRE     Int NOT NULL ,
+        id_fa            Int ,
+        id_membre     Int ,
         id_race            Int NOT NULL
 	,CONSTRAINT ANIMAL_PK PRIMARY KEY (id_animal)
 
-	,CONSTRAINT ANIMAL_FA_FK FOREIGN KEY (id_user) REFERENCES FA(id_user)
-	,CONSTRAINT ANIMAL_MEMBRE0_FK FOREIGN KEY (id_user_MEMBRE) REFERENCES MEMBRE(id_user)
+	,CONSTRAINT ANIMAL_FA_FK FOREIGN KEY (id_fa) REFERENCES FA(id_user)
+	,CONSTRAINT ANIMAL_MEMBRE0_FK FOREIGN KEY (id_membre) REFERENCES MEMBRE(id_user)
 	,CONSTRAINT ANIMAL_RACE1_FK FOREIGN KEY (id_race) REFERENCES RACE(id_race)
 )ENGINE=InnoDB;
 

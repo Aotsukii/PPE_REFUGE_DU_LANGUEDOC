@@ -10,38 +10,48 @@ catch (Exception $e)
 }
 if((isset($_SESSION['ID_MEMBRE'])))
 {
-?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Liste des chats à l'adoption</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/datatable.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/css/mdb.min.css" rel="stylesheet">
+    $id_membre = $_SESSION['ID_MEMBRE'];
+    ?>
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Liste des animaux adoptés</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/datatable.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/css/mdb.min.css" rel="stylesheet">
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
-</head>
-<script>
-    $(function () {
-        $("#header").load("./includes/header_membre.html");
-    });
-</script>
-<div id="header"></div>
-<body>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
+    </head>
+    <script>
+        $(function () {
+            $("#header").load("./includes/header_membre.html");
+        });
+    </script>
+    <div id="header"></div>
+    <body>
     <section style="height:100vh;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center font-weight-bold page-title">LISTE DES CHATS A L'ADOPTION</h2>
+                    <h2 class="text-center font-weight-bold page-title">LISTE DES ANIMAUX ADOPTES PAR <?php
+                        $nom_mem= $connect->prepare("SELECT nom_user, prenom_user FROM membre WHERE id_user=$id_membre");
+                        if($nom_mem->execute()){
+                            $result=$nom_mem->fetchAll();
+                            foreach($result AS $user){
+                                echo($user['nom_user']." ".$user['prenom_user']);
+                            }
+                        };
+
+                        ?> </h2>
                     <table id="example" class="table table-striped table-bordered">
                         <thead>
                         <tr>
@@ -58,12 +68,11 @@ if((isset($_SESSION['ID_MEMBRE'])))
                             <th>PRIX ADOPTION</th>
                             <th>BESOIN TRAITEMENT</th>
                             <th>DESCRIPTION</th>
-                            <th>ADOPTER</th>
                         </tr>
                         </thead>
                         <tbody>
                         <?php
-                        $stmt=$connect->prepare("SELECT * FROM animal INNER JOIN race ON animal.id_race = race.id_race WHERE est_chat=1 AND id_membre IS NULL");
+                        $stmt=$connect->prepare("SELECT * FROM animal INNER JOIN race ON animal.id_race = race.id_race WHERE id_membre=$id_membre");
                         if ($stmt->execute()){
                             $result=$stmt->fetchAll();
                             foreach($result AS $chat){
@@ -79,8 +88,7 @@ if((isset($_SESSION['ID_MEMBRE'])))
                                 echo("<td>".$chat['date_creation']."</td>");
                                 echo("<td>".$chat['prix_adoption']."</td>");
                                 echo("<td>".$chat['besoinTraitement']."</td>");
-                                echo("<td>".$chat['description_animal']."</td>");
-                                echo("<td><a href=\"traitment_adopt_chat.php?id_animal=".$chat['id_animal']."\"class=\"btn btn-default btn-rounded\" type='submit' id='submit' name='submit'>Adopter</a></td></tr>");
+                                echo("<td>".$chat['description_animal']."</td></tr>");
                             }
                         }
                         ?>
@@ -90,8 +98,8 @@ if((isset($_SESSION['ID_MEMBRE'])))
             </div>
         </div>
     </section>
-</body>
-</html>
+    </body>
+    </html>
     <?php
 } else { header('location:index.php?error=Vous n\'avez pas accès à cette page');}
 ?>

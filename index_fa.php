@@ -1,3 +1,8 @@
+<?php
+session_start();
+if((isset($_SESSION['ID_FA'])))
+{
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -35,7 +40,7 @@
                         <div>
                             <h3 class="card-title pt-2"><strong>HEBERGER</strong></h3>
                             <p>Cliquez pour accéder à la liste des animaux à héberger au Refuge Du Languedoc.</p>
-                            <a class="btn btn-lg btn-default btn-rounded" href="./heberger_fa.php"><i class="fas fa-clone left"></i> Voir les animaux à héberger</a>
+                            <a class="btn btn-lg btn-default btn-rounded" href="heberger.php"><i class="fas fa-clone left"></i> Voir les animaux à héberger</a>
                         </div>
                     </div>
                 </div>
@@ -52,3 +57,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.4/js/mdb.min.js"></script>
 </body>
 </html>
+    <?php
+} else { header('location:index.php?error=Vous n\'avez pas accès à cette page');}
+?>
