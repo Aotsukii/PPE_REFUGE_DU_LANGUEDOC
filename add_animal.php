@@ -34,7 +34,7 @@ if((isset($_SESSION['ID_GERANT'])))
 <body>
 <div class="container h-100">
     <div class="row h-100">
-        <div class="col-md my-auto">
+        <div class="col-md-9 my-auto">
             <section class="mb-4 contactSection">
                 <!--Section heading-->
                 <h3 class="h1-responsive font-weight-bold text-center my-4">AJOUTER UN ANIMAL</h3>
@@ -134,7 +134,32 @@ if((isset($_SESSION['ID_GERANT'])))
                         <div class="status"></div>
                     </div>
                 </div>
-            </section>
+        </div>
+        <div class="col-md-3 my-auto">
+            <section class="mb-4 contactSection">
+                <!--Section heading-->
+                <h3 class=" font-weight-bold text-center my-4">Nouvelle Race</h3>
+                <!--Section description-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-12 mb-md-5 mb-5">
+                        <form id="contact-form" name="contact-form" action="traitment_add_race.php" method="POST">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-5">
+                                        <input type="text" id="nomR" name="nomR" class="form-control">
+                                        <label for="nomR" class="">Nom de la race</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center text-md-left">
+                                <button class="btn btn-lg btn-default btn-rounded" type="submit" id="submit" name="submit">Enregistrer</button>
+                            </div>
+                        </form>
+                        <div class="status"></div>
+                    </div>
+                </div>
+        </div>
         </div>
     </div>
 </div>
